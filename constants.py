@@ -97,6 +97,9 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 #### (FOR GGUF MODELS)
 ####
 
+MODEL_ID = "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF"
+MODEL_BASENAME = "Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf"
+
 # MODEL_ID = "TheBloke/Llama-2-13b-Chat-GGUF"
 # MODEL_BASENAME = "llama-2-13b-chat.Q4_K_M.gguf"
 
@@ -120,8 +123,8 @@ EMBEDDING_MODEL_NAME = "hkunlp/instructor-large"  # Uses 1.5 GB of VRAM (High Ac
 # MODEL_ID = "unsloth/llama-3-8b-bnb-4bit"
 # MODEL_BASENAME = None
 
-MODEL_ID = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
-MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
+# MODEL_ID = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
+# MODEL_BASENAME = "mistral-7b-instruct-v0.1.Q8_0.gguf"
 
 # MODEL_ID = "TheBloke/Llama-2-70b-Chat-GGUF"
 # MODEL_BASENAME = "llama-2-70b-chat.Q4_K_M.gguf"

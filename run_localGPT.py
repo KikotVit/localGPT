@@ -100,7 +100,7 @@ def load_model(device_type, model_id, model_basename=None, LOGGING=logging):
         tokenizer=tokenizer,
         max_length=MAX_NEW_TOKENS,
         temperature=0,
-        # top_p=0.95,
+        top_p=0.95,
         repetition_penalty=1.15,
         generation_config=generation_config,
     )
@@ -268,6 +268,7 @@ def main(device_type, show_sources, use_history, model_type, save_qa):
         os.mkdir(MODELS_PATH)
 
     qa = retrieval_qa_pipline(device_type, use_history, promptTemplate_type=model_type)
+    print('retrieval_qa_pipline model_type: ', model_type)
     # Interactive questions and answers
     while True:
         query = input("\nEnter a query: ")
