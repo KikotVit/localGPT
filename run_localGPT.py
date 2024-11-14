@@ -35,7 +35,7 @@ from constants import (
     MODEL_BASENAME,
     MAX_NEW_TOKENS,
     MODELS_PATH,
-    CHROMA_SETTINGS,    
+    CHROMA_SETTINGS,
 )
 
 
@@ -59,7 +59,7 @@ def load_model(device_type, model_id, model_basename=None, LOGGING=logging):
     """
     logging.info(f"Loading Model: {model_id}, on: {device_type}")
     logging.info("This action can take a few minutes!")
-    
+
     if model_basename is not None:
         if ".gguf" in model_basename.lower():
             llm = load_quantized_model_gguf_ggml(model_id, model_basename, device_type, LOGGING)
@@ -86,7 +86,7 @@ def load_model(device_type, model_id, model_basename=None, LOGGING=logging):
         pipe = GaudiTextGenerationPipeline(
             model_name_or_path=model_id,
             max_new_tokens=1000,
-            temperature=0.2,
+            temperature=0,
             top_p=0.95,
             repetition_penalty=1.15,
             do_sample=True,
@@ -99,7 +99,7 @@ def load_model(device_type, model_id, model_basename=None, LOGGING=logging):
         model=model,
         tokenizer=tokenizer,
         max_length=MAX_NEW_TOKENS,
-        temperature=0.2,
+        temperature=0,
         # top_p=0.95,
         repetition_penalty=1.15,
         generation_config=generation_config,
